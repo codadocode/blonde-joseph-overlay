@@ -92,7 +92,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
-  <component name="RunManager" selected="Gradle.blonde-joseph-overlay:desktop [jar]">
+  <component name="RunManager" selected="Application.DesktopLauncher">
     <configuration name="DesktopLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -165,22 +165,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="657" y="139" key="#DesktopLauncher/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589388778156" />
-    <state width="1877" height="259" key="GridCell.Tab.0.bottom" timestamp="1589392887297">
+    <state width="1877" height="259" key="GridCell.Tab.0.bottom" timestamp="1589395339525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589392887297" />
-    <state width="1877" height="259" key="GridCell.Tab.0.center" timestamp="1589392887296">
+    <state width="1877" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589395339525" />
+    <state width="1877" height="259" key="GridCell.Tab.0.center" timestamp="1589395339524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589392887296" />
-    <state width="1877" height="259" key="GridCell.Tab.0.left" timestamp="1589392887296">
+    <state width="1877" height="259" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589395339524" />
+    <state width="1877" height="259" key="GridCell.Tab.0.left" timestamp="1589395339524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589392887296" />
-    <state width="1877" height="259" key="GridCell.Tab.0.right" timestamp="1589392887297">
+    <state width="1877" height="259" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589395339524" />
+    <state width="1877" height="259" key="GridCell.Tab.0.right" timestamp="1589395339524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589392887297" />
+    <state width="1877" height="259" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589395339524" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589388606080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

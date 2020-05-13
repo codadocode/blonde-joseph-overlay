@@ -32,4 +32,12 @@ public class AudioPlayback {
     public List<Music> getMusicList()   {
         return this.musicList;
     }
+    public boolean checkMusicInList(List<Music> sounds)   {
+        for (Music tmpMusic : sounds) {
+            if (this.musicList.contains(tmpMusic))   {
+                return true;
+            }
+        }
+        return false;
+    }
 }

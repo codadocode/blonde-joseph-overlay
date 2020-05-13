@@ -29,6 +29,9 @@ public class BlondeSoundSource {
     public static Music louro_chamando_maria_braga;
     public static Music louro_chamando_maria_braga_puto;
     public static Music louro_maria_braga;
+    //ELSE
+    public static Music louro_eu_nao_vou_desenvolver_resposta;
+    public static Music louro_eu_nao_posso_responder_isso_tbm;
 
     public static void loadSounds()   {
         //Load Saudações
@@ -54,5 +57,8 @@ public class BlondeSoundSource {
         louro_chamando_maria_braga = audio.newMusic(Gdx.files.internal("sounds/blonde/louro_chamando_maria_braga.wav"));
         louro_chamando_maria_braga_puto = audio.newMusic(Gdx.files.internal("sounds/blonde/louro_chamando_maria_braga_puto.wav"));
         louro_maria_braga = audio.newMusic(Gdx.files.internal("sounds/blonde/louro_maria_braga.wav"));
+        //ELSE
+        louro_eu_nao_vou_desenvolver_resposta = audio.newMusic(Gdx.files.internal("sounds/blonde/louro_eu_nao_vou_desenvolver_resposta_porque_nao_posso_me_comprometer.wav"));
+        louro_eu_nao_posso_responder_isso_tbm = audio.newMusic(Gdx.files.internal("sounds/blonde/louro_desculpa_mas_nao_posso_responder_isso_tambem.wav"));
     }
 }
