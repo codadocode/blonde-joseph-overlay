@@ -14,7 +14,9 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
+import javafx.scene.control.PasswordField;
 
+import javax.swing.*;
 import java.io.IOException;
 
 import static com.badlogic.gdx.Gdx.audio;
@@ -37,7 +39,7 @@ public class MainGame extends ApplicationAdapter {
 		controller.setBlonde(blonde);
 		loadSounds();
 		//region Dados Sensíveis
-		accountInfo = new TwitchInfo("narebabr","oauth:dutpzoq8g066qz8xecxin3csxk7u99","narebabr");
+		accountInfo = enterStreamKey();
 		//endregion
 		twitchConection = new TwitchConection("irc.chat.twitch.tv", 6667, controller);
 		try {
@@ -72,5 +74,29 @@ public class MainGame extends ApplicationAdapter {
 	}
 	public void loadSounds()   {
 		BlondeSoundSource.loadSounds();
+	}
+	public TwitchInfo enterStreamKey()   {
+		JPanel keyPanel = new JPanel();
+		JLabel label = new JLabel("Oauth");
+		JPasswordField keyLabel = new JPasswordField(20);
+		JLabel usernameLabel = new JLabel("Username");
+		JTextField usernameField = new JTextField(20);
+		keyPanel.add(usernameLabel);
+		keyPanel.add(usernameField);
+		keyPanel.add(label);
+		keyPanel.add(keyLabel);
+		String options[] = {"OK", "Cancel"};
+		int option = JOptionPane.showOptionDialog(null, keyPanel, "Insert Twitch Oauth Code", JOptionPane.NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[1]);
+		if (option == 0)   {
+			if (keyLabel.getPassword().length > 0 && usernameField.getText().length() > 0)   {
+				String oauthKey = new String(keyLabel.getPassword());
+				String username = usernameField.getText();
+				TwitchInfo accountInfo = new TwitchInfo(username, oauthKey, username);
+				return accountInfo;
+			}else   {
+				//Pop Up Errado
+			}
+		}
+		return null;
 	}
 }
