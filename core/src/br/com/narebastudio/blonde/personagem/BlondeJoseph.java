@@ -30,7 +30,7 @@ public class BlondeJoseph extends Sprite {
             for (String carac : filtroPalavras)   {
                 //System.out.println(carac);
                 switch(carac)   {
-                    case "beleza": case "tranquilo": case "de boa": case "sussa": case "firmeza": case "tranquilao": case "eai": case "eae":
+                    case "beleza": case "tranquilo": case "boa": case "sussa": case "firmeza": case "tranquilao": case "eai": case "eae": case "iai": case "oi": case "oii": case "fala":
                         sounds.add(BlondeSoundSource.louro_beleza_meu_querido);
                         sounds.add(BlondeSoundSource.louro_ta_legal_meu_querido);
                         if (!audioPlayback.checkMusicInList(sounds))   {
@@ -103,7 +103,7 @@ public class BlondeJoseph extends Sprite {
                             audioPlayback.addSound(BlondeSoundSource.louro_vai_tu);
                         }
                         break;
-                    case "ama": case "gosta": case "curti":
+                    case "ama": case "gosta": case "curti": case "curte":
                         sounds.add(BlondeSoundSource.louro_eu_amo_todo_mundo_cara);
                         if (!audioPlayback.checkMusicInList(sounds))   {
                             audioPlayback.addSound(BlondeSoundSource.louro_eu_amo_todo_mundo_cara);
