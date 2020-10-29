@@ -17,6 +17,7 @@ import com.badlogic.gdx.math.Vector2;
 import javafx.scene.control.PasswordField;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 
 import static com.badlogic.gdx.Gdx.audio;
@@ -32,14 +33,14 @@ public class MainGame extends ApplicationAdapter {
 	Music somTest;
 	@Override
 	public void create () {
+		//region Dados Sensíveis
+		accountInfo = enterStreamKey();
 		loadTextures();
 		batch = new SpriteBatch();
 		blonde = new BlondeJoseph(personagensTex, new Vector2(180,180), 0, 0, 128, 128, 1,1);
 		controller = new Controller();
 		controller.setBlonde(blonde);
 		loadSounds();
-		//region Dados Sensíveis
-		accountInfo = enterStreamKey();
 		//endregion
 		twitchConection = new TwitchConection("irc.chat.twitch.tv", 6667, controller);
 		try {
@@ -70,7 +71,11 @@ public class MainGame extends ApplicationAdapter {
 		batch.dispose();
 	}
 	public void loadTextures()   {
-		personagensTex = new Texture("sprites/blonde_joseph_spritesheet.png");
+		if (!BlondeSoundSource.is2077)    {
+			personagensTex = new Texture("sprites/blonde_joseph_spritesheet.png");
+		}else   {
+			personagensTex = new Texture("sprites/blonde_joseph_2077_spritesheet.png");
+		}
 	}
 	public void loadSounds()   {
 		BlondeSoundSource.loadSounds();
@@ -81,6 +86,8 @@ public class MainGame extends ApplicationAdapter {
 		JPasswordField keyLabel = new JPasswordField(20);
 		JLabel usernameLabel = new JLabel("Username");
 		JTextField usernameField = new JTextField(20);
+		Checkbox checkBox2077 = new Checkbox("2077?");
+		keyPanel.add(checkBox2077);
 		keyPanel.add(usernameLabel);
 		keyPanel.add(usernameField);
 		keyPanel.add(label);
@@ -92,6 +99,7 @@ public class MainGame extends ApplicationAdapter {
 				String oauthKey = new String(keyLabel.getPassword());
 				String username = usernameField.getText();
 				TwitchInfo accountInfo = new TwitchInfo(username, oauthKey, username);
+				BlondeSoundSource.is2077 = checkBox2077.getState();
 				return accountInfo;
 			}else   {
 				//Pop Up Errado
